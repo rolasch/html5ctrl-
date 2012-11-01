@@ -17,16 +17,16 @@ LESS syntax clientseittig
 */
 
 @UIMargin: 40px;
-@UIFontHeadline: Helvetica, Arial, sans-serif;
-@UIFontText: Georgia, serif;
+@UIFontHeadline: "Bitter", Helvetica, Arial, sans-serif;
+@UIFontText: "PT Serif", Georgia, serif;
 
 @UIHeadlineColor: rgb(180,180,180);
 @UIHTextColor: rgb(40,40,40);
 
 .UIh1(){
   font-family: @UIFontHeadline;
-  font-style: normal;
-  font-size: 36px;
+  font-size: 40px;
+  font-weight: 700;
   color: @UIHeadlineColor;
   line-height: 1.3em;
 }
@@ -46,14 +46,29 @@ LESS syntax clientseittig
 CSS
 */
 
-article h1{
+body{
+  width: 100%;
+}
+
+header, footer, section{
+  margin: @UIMargin;
+}
+
+section article h1{
   .UIh1;
 }
 
-article p{
+section article p{
   .UItxt;
 }
 
-
+section article.txt p {
+	-webkit-column-count: 2;
+	-webkit-column-gap: 20px;
+	-moz-column-count: 2;
+	-moz-column-gap: 20px;
+  column-count: 2;
+	column-gap: 20px;
+}
 
 /* @end */
