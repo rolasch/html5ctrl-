@@ -5,6 +5,7 @@
 - css (less syntax)
 - jquery or zepto
 - php
+- and some Google Webfonts
 
 ## version 0.1
 WIP
